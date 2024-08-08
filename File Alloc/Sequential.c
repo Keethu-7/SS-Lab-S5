@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<string.h>
 struct file {
     int name;
     int sb,length;
