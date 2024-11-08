@@ -53,6 +53,23 @@ void main(){
             locctr++;
             locdisp++;
         }
+
+        /*
+        else if (strcmp(opcode, "BYTE") == 0) { 
+            int byteLength = 0;
+            if (operand[0] == 'C') {
+                // For character constants like C'HELLO'
+                byteLength = strlen(operand) - 3;  // Subtract 3 for C' and '
+            } 
+            else if (operand[0] == 'X') {
+                // For hexadecimal constants like X'F1A3'
+                byteLength = (strlen(operand) - 3) / 2;  // Subtract 3 for X' and ', divide by 2 for hex pairs
+            }
+            locctr += byteLength; 
+            locdisp += byteLength;
+        }
+
+*/
         fprintf(fp_ou, "%s\t%s\t%s\t\n", label, opcode, operand);
         printf("%s\t%s\t%s\t\n", label, opcode, operand);
         fscanf(fp_in, "%s\t%s\t%s", label, opcode, operand);
