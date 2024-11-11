@@ -7,6 +7,7 @@ void main() {
     char line[50],name1[50],staddr[200];
     
     fp=fopen("ab.txt","r");
+    fp1=fopen("output.txt","w");
     fscanf(fp,"%s",line);       //read first line - header rec
     for(i=2,j=0;line[i]!='^';i++,j++) {     //i=2 to avoid H^
         name1[j]=line[i];       //store name of prgm from header record
@@ -28,6 +29,7 @@ void main() {
                 if(line[i]!='^') {
                     //two bytes of object code is stored in one addrress
                     printf("00%d\t%c%c\n",stdaddr1,line[i],line[i+1]);
+                    fprintf(fp1,"00%d\t%c%c\n",stdaddr1,line[i],line[i+1]);
                     stdaddr1++;
                     i=i+2;  //two char in one adrr, so skip two char
                 }
