@@ -1,10 +1,10 @@
 PGM	START	0
 .	ABC	P,Q
--	STA	?1
--	STB	?2
+-	STA	P
+-	STB	Q
 .	ABC	R,S
--	STA	?1
--	STB	?2
+-	STA	R
+-	STB	S
 P	RESW	1
 Q	RESW	1
 R	RESW	1
