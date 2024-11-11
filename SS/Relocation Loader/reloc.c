@@ -19,7 +19,7 @@ void main() {
     fprintf(fp2, " ----------------------------\n");
     while (strcmp(input, "E") != 0) {       //until input record type is not E
         if (strcmp(input, "H") == 0) {      //until input  type is H
-            fscanf(fp1, "%s", pn);
+            fscanf(fp1, "%s", pn);        //read program name
             fscanf(fp1, "%x", add);     //read starting address from file
             fscanf(fp1, "%x", length);  //read object program length
             fscanf(fp1, "%s", input);   //read input record type
