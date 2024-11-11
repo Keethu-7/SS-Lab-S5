@@ -51,7 +51,6 @@ void main() {
                 while(strcmp(mne1,"MEND")!=0) {
                     if((opnd1[0]=='?')) {    
                         fscanf(f4,"%s",arg);
-                        //fseek(f4,SEEK_SET,0);
                         fprintf(f5,"-\t%s\t%s\n",mne1,arg);
                     }
                     else
